@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dino Delic">
+    <title>Dino Delic CV Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(148, 148, 163);
+            font-family: "Inconsolata", monospace;
+        }
+
+        .mainContainer {
+            display: grid;
+            grid-template-rows: auto 25px auto 25px auto 25px auto 25px auto 25px auto 25px;
+            row-gap: 10px;
+        }
+
+        .borderContainer {
+            background: repeating-linear-gradient(
+                45deg,
+                white 0px,
+                white 20px,
+                black 20px,
+                black 40px);
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+        header {
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+            column-gap: 10px;
+        }
+
+        .nameContainer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            border: 3px solid white;
+            border-radius: 10px;
+            animation-name: negativ;
+            animation-duration: 3s;
+        }
+
+        .profileImageContainer {
+            border: 3px solid white;
+            border-radius: 10px;
+            background: url(dinoDelicZad22ProfileImage.jpg) center center;
+            background-size: cover;
+        }
+
+        nav {
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr;
+            text-align: center;
+            column-gap: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .linksContainers {
+            background-color: black;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 5px;
+        }
+
+        .linksContainers:hover {
+            background-color: grey;
+        }
+
+        .linksContainers a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 20px;            
+        }
+
+        .linksContainers a:hover {
+            color: black;
+        }
+
+        .blackBox {
+            background-color: black;
+            border-radius: 10px;
+        }
+
+        .aboutMeContainer, .languagesAndHobbiesContainer {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr 2.5fr;
+            column-gap: 10px;
+        }
+
+        .aboutMeText {
+            display: flex;
+            justify-content: center;
+        }
+            
+        
+        .skillsContainer, .aboutMeText, .employmentHistoryText, .educationText, .languagesContainer, .hobbiesContainer {
+            background-color: white;
+            align-items: center;
+            border: 3px solid black;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .employmentHistoryContainer {
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+            column-gap: 10px;
+        }
+
+        .educationContainer {
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            column-gap: 10px; 
+        }
+
+        @keyframes negativ {
+            0% {
+                background-color: white;
+                color: black;
+                border-color: black;
+            }
+
+            100% {
+                background-color: black;
+                color: white;
+                border-color: white;
+            }
+        }
+        
+        @media (max-width: 850px) {
+            .profileImageContainer {
+                display: none;
+            }
+
+            header {
+                grid-template-columns: 6fr;
+            }
+
+            .blackBox{
+                display: none;
+            }
+
+            .aboutMeContainer, .languagesAndHobbiesContainer {
+            grid-template-columns: 3fr 3fr;
+            column-gap: 10px;
+            }
+
+            .employmentHistoryContainer, .educationContainer {
+                grid-template-columns: 6fr;
+            }
+        }
+            
+
+        @media (max-width: 600px) {
+            .aboutMeContainer, .languagesAndHobbiesContainer {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr auto;
+            row-gap: 10px;
+            }
+        }   
+    </style>
+</head>
+<body>
+    <div class="mainContainer">
+        <header>
+            <div class="nameContainer">
+                <h1>D i n o</h1>
+                <h1>D e l i c</h1>
+            </div>
+            <div class="profileImageContainer">
+                <!--<img src="dinoDelicZad22ProfileImage.jpg" alt="Profile Image">-->
+            </div>
+        </header>
+
+        <div class="borderContainer"></div>
+
+        <nav>
+            <div class="linksContainers">
+                <a href="dinoDelicResumeWebpageHour9.html">Home</a>
+            </div>
+            <div class="linksContainers">
+                <a href="#">AboutMe</a>
+            </div>
+            <div class="linksContainers">
+                <a href="dinoDelicZad22ContactPage.html">Contact</a>
+            </div>
+        </nav>
+
+        <div class="borderContainer"></div>
+
+        <div class="aboutMeContainer">
+            <div class="aboutMeText">
+                <p>
+                    I am a <strong>Petroleum Engineer</strong> familiar with all stages of Oil and Gas <strong>Exploration</strong> 
+                    and <strong>Exploatation</strong> process. Through my life I've been involved in working in other fields like
+                    <strong>Geodesy</strong>, <strong>Data Science</strong> and <strong>Life Sciences</strong>. As of late I've been 
+                    studing <strong>Software Development</strong>. 
+                </p>
+            </div>
+
+            <div class="blackBox"></div>
+
+            <div class="skillsContainer">
+                <h3>Skills:</h3>
+                <ul>
+                    <li>Geophysical and Seismic Testing</li>
+                    <li>Test Drilling</li>
+                    <li>Geological Profiling</li>
+                    <li>Well Engineering</li>
+                    <li>Well Testing</li>
+                    <li>Mud Logging</li>
+                    <li>Pipelines and Storages Engineering</li>
+                    <li>Statistics</li>
+                    <li>Microsoft Office</li>
+                    <li>HTML/CSS</li>
+                </ul>
+            </div>
+        </div>
+
+            
+        <div class="borderContainer"></div>
+
+        
+        <div class="employmentHistoryContainer">
+            <div class="employmentHistoryText">
+                <h3>Employment:</h3>
+                <ul>
+                    <li><strong>Veeva Sysitems, Inc.</strong><br>
+                        <em>November, 2020 - Current</em><br>
+                        Data Analyst, Sign-off QC Unit, Platform Build Data Stream
+                    </li>
+                    <br>
+                    <li><strong>Parapost, d.o.o.</strong><br>
+                        <em>August, 2019 - December, 2019</em><br>
+                        Geodesist
+                    </li>
+                </ul>
+            </div>
+
+            <div class="blackBox"></div>
+        </div>
+
+
+        <div class="borderContainer"></div>
+
+
+        <div class="educationContainer">
+            <div class="blackBox"></div>
+
+            <div class="educationText">
+                <h3>Education:</h3>
+                <ul>
+                    <li><strong>Bachelor of Engineering (BEng) in Oil and Gas Exploatation</strong><br>
+                        <em>2010 - 2018</em><br>
+                        University of Tuzla - Faculty of Mining, Geology and Civil Engineering
+                    </li>
+                </ul>
+            </div>
+        </div>
+                    
+        <div class="borderContainer"></div>
+
+        <div class="languagesAndHobbiesContainer">
+
+            <div class="languagesContainer">
+                <h3>Languages:</h3>
+                <ul>
+                    <li><strong>Bosnian</strong> - <em>Native</em></li>
+                    <br>
+                    <li><strong>English</strong> - <em>Advanced</em></li>
+                    <br>
+                    <li><strong>German</strong> - <em>Basic</em></li>
+                </ul>
+            </div>
+
+            <div class="blackBox"></div>
+
+            <div class="hobbiesContainer">
+                <h3>Hobbies:</h3>
+                <ul>
+                    <li>Reading</li>
+                    <br>
+                    <li>Chess</li>
+                    <br>
+                    <li>Basketball</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="borderContainer"></div>
+
+    </div>
+</body>
+</html>

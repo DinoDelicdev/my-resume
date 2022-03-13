@@ -1,0 +1,228 @@
+<!--In the ninth hour I creted Abot and Contact pages, linked them, added some effects to all pages and an animation-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dino Delic">
+    <title>Dino Delic CV Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(148, 148, 163);
+            font-family: "Inconsolata", monospace;
+        }
+
+        .mainContainer {
+            display: grid;
+            grid-template-rows: auto 25px auto 25px auto 25px auto 25px auto 25px;
+            row-gap: 10px;
+        }
+
+        .borderContainer {
+            background: repeating-linear-gradient(
+                45deg,
+                white 0px,
+                white 20px,
+                black 20px,
+                black 40px);
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+        header {
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+            column-gap: 10px;
+        }
+
+        .nameContainer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            border: 3px solid white;
+            border-radius: 10px;
+            animation-name: negativ;
+            animation-duration: 3s;
+        }
+
+        .profileImageContainer {
+            border: 3px solid white;
+            border-radius: 10px;
+            background: url(dinoDelicZad22ProfileImage.jpg) center center;
+            background-size: cover;
+        }
+
+        nav {
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr;
+            text-align: center;
+            column-gap: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .linksContainers {
+            background-color: black;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 5px;
+        }
+
+        .linksContainers:hover {
+            background-color: grey;
+        }
+
+        .linksContainers a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 20px;            
+        }
+
+        .linksContainers a:hover {
+            color: black;
+        }
+
+        .petroleumEngineerContainer, .dataAnalystContainer, .softwareDeveloperContainer {
+            display: grid;
+            grid-template-columns: 3fr 3fr;
+            column-gap: 10px;
+        }
+
+        .petroleumEngineerImage, .dataAnalystImage, .softwareDeveloperImage {
+            background-color: white;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+
+        .imageDescription {
+            display: flex;
+            background-color: black;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        img {
+            max-height: 100%;
+            /*display: inline-block;*/
+            max-width: 100%;
+            object-fit: fill;
+        }
+
+        @keyframes negativ {
+            0% {
+                background-color: white;
+                color: black;
+                border-color: black;
+            }
+
+            100% {
+                background-color: black;
+                color: white;
+                border-color: white;
+            }
+        }
+        
+        @media (max-width: 850px) {
+            .profileImageContainer {
+                display: none;
+            }
+
+            header {
+                grid-template-columns: 6fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .imageDescription{
+                font-size: 15px;
+            }
+
+            .petroleumEngineerContainer, .dataAnalystContainer, .softwareDeveloperContainer {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr auto;
+                row-gap: 10px;
+            }
+
+            /*.dataAnalystContainer {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr;
+            }*/
+
+            .dataAnalystImage {
+                grid-row: 1 / 2;
+            }
+
+            .dataAnalystContainer > .imageDescription {
+                grid-row: 2 / 3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mainContainer">
+        <header>
+            <div class="nameContainer">
+                <h1>D i n o</h1>
+                <h1>D e l i c</h1>
+            </div>
+            <div class="profileImageContainer">
+                <!--<img src="dinoDelicZad22ProfileImage.jpg" alt="Profile Image">-->
+            </div>
+        </header>
+
+        <div class="borderContainer"></div>
+
+        <nav>
+            <div class="linksContainers">
+                <a href="#">Home</a>
+            </div>
+            <div class="linksContainers">
+                <a href="dinoDelicZad22AboutPage.html">About Me</a>
+            </div>
+            <div class="linksContainers">
+                <a href="dinoDelicZad22ContactPage.html">Contact</a>
+            </div>
+        </nav>
+
+        <div class="borderContainer"></div>
+
+        <div class="petroleumEngineerContainer">
+            <div class="petroleumEngineerImage">
+                <img src="http://clipart-library.com/images/5iRKkb4BT.png" alt="Oil Pump">
+            </div>
+            <div class="imageDescription">
+                <h1>Petroleum Engineer</h1>
+            </div>
+        </div>
+
+        <div class="borderContainer"></div>
+
+        <div class="dataAnalystContainer">
+            <div class="imageDescription">
+                <h1>Data Analyst</h1>
+            </div>
+            <div class="dataAnalystImage">
+                <img src="http://clipart-library.com/img/1974629.png" alt="Data Image">
+            </div>
+        </div>
+            
+
+        <div class="borderContainer"></div>
+
+        <div class="softwareDeveloperContainer">
+            <div class="softwareDeveloperImage">
+                <img src="https://library.kissclipart.com/20180922/kyq/kissclipart-binary-code-icon-png-clipart-computer-icons-binary-a51498591fec6bce.png" alt="Code Image">
+            </div>
+            <div class="imageDescription">
+                <h1>Aspiring Software Developer</h1>
+            </div>
+        </div>
+        
+        <div class="borderContainer"></div>
+    </div>
+</body>
+</html>
